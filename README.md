@@ -2,4 +2,6 @@ A dynamic and user-friendly e-commerce platform designed to offer a seamless sho
 
 To be added...
 
+Collaborators: Harsha, Bhargav, Prasanth, Jay and Rahul 
+
 Still this file needs to be updated
