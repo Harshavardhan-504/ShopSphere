@@ -127,3 +127,7 @@ STATIC_ROOT = BASE_DIR /'static'
 STATICFILES_DIRS = [
     'shopshere/static',
 ]
+
+#mediafiles configuration
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR /'media'
