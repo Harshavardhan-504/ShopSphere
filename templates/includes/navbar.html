@@ -7,15 +7,6 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarTop4">
-    <ul class="navbar-nav mr-auto">
-    	<li class="nav-item dropdown">
-		 	<a href="#" class="nav-link">   English </a>
-
-		</li>
-		<li class="nav-item dropdown">
-			<a href="#" class="nav-link"> USD </a>
-		</li>
-    </ul>
     <ul class="navbar-nav">
 		<li><a href="#" class="nav-link"> <i class="fa fa-envelope"></i> Email </a></li>
 		<li><a href="#" class="nav-link"> <i class="fa fa-phone"></i> Call us </a></li>
@@ -29,18 +20,16 @@
 <div class="row align-items-center">
 	<div class="col-lg-2 col-md-3 col-6">
 		<a href="./" class="brand-wrap">
-			<img class="logo" src="{% static './images/logo.png' %}">
+			<img class="logo" src="{% static './images/logoNew.png' %}">
 		</a> <!-- brand-wrap.// -->
 	</div>
 	<div class="col-lg col-sm col-md col-6 flex-grow-0">
 		<div class="category-wrap dropdown d-inline-block float-right">
 			<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-				<i class="fa fa-bars"></i> All category
+				<i class="fa fa-layer-group"></i> Categories
 			</button>
 			<div class="dropdown-menu">
-				<a class="dropdown-item" href="#">Machinery / Mechanical Parts / Tools </a>
 				<a class="dropdown-item" href="#">Consumer Electronics / Home Appliances </a>
-				<a class="dropdown-item" href="#">Auto / Transportation</a>
 				<a class="dropdown-item" href="#">Apparel / Textiles / Timepieces </a>
 				<a class="dropdown-item" href="#">Home & Garden / Construction / Lights </a>
 				<a class="dropdown-item" href="#">Beauty & Personal Care / Health </a>
@@ -51,7 +40,7 @@
 	<div class="col-lg  col-md-6 col-sm-12 col">
 		<form action="#" class="search">
 			<div class="input-group w-100">
-			    <input type="text" class="form-control" style="width:60%;" placeholder="Search">
+			    <input type="text" class="form-control" style="width:60%;" placeholder="Search products">
 
 			    <div class="input-group-append">
 			      <button class="btn btn-primary" type="submit">
@@ -63,13 +52,23 @@
 	</div> <!-- col.// -->
 	<div class="col-lg-3 col-sm-6 col-8 order-2 order-lg-3">
 				<div class="d-flex justify-content-end mb-3 mb-lg-0">
+					{% if user.id is None %}
 					<div class="widget-header">
 						<small class="title text-muted">Welcome guest!</small>
 						<div>
-							<a href="./signin.html">Sign in</a> <span class="dark-transp"> | </span>
-							<a href="./register.html"> Register</a>
+							<a href="{%url 'login' %}">Sign in</a> <span class="dark-transp"> | </span>
+							<a href="{%url 'register' %}"> Register</a>
 						</div>
 					</div>
+					{% else %}
+					<div class="widget-header">
+						<small class="title text-muted">Welcome {{user.first_name}}!</small>
+						<div>
+							<a href="">Dashboard</a> <span class="dark-transp"> | </span>
+							<a href="{%url 'logout' %}"> Logout</a>
+						</div>
+					</div>
+					{% endif %}
 					<a href="./cart.html" class="widget-header pl-3 ml-3">
 						<div class="icon icon-sm rounded-circle border"><i class="fa fa-shopping-cart"></i></div>
 						<span class="badge badge-pill badge-danger notify">0</span>
