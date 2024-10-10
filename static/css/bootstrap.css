@@ -3074,6 +3074,17 @@ input[type=button].btn-block {
   border-radius: 0.37rem;
 }
 
+.dropdown-menu {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.show .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
 .dropdown-menu-left {
   right: auto;
   left: 0;
@@ -10151,5 +10162,6 @@ h3 {
     border-color: #dee2e6;
   }
 }
+
 
 /*# sourceMappingURL=bootstrap.css.map */
