@@ -30,51 +30,51 @@
 
 
 <hr>
-	<div class="row">
-		<div class="item-option-select">
-			<h6>Choose Color</h6>
-			<div class="btn-group btn-group-sm btn-group-toggle" data-toggle="buttons">
-			  <label class="btn btn-light">
-			    <input type="radio" name="radio_color"> Silver
-			  </label>
-			  <label class="btn btn-light">
-			    <input type="radio" name="radio_color" > Gray
-			  </label>
-			  <label class="btn btn-light active">
-			    <input type="radio" name="radio_color checked"> Gold
-			  </label>
-			  <label class="btn btn-light">
-			    <input type="radio" name="radio_color"> Black
-			  </label>
-			</div>
-		</div>
-	</div> <!-- row.// -->
-	<div class="row">
-		<div class="item-option-select">
-			<h6>Select Size</h6>
-			<div class="btn-group btn-group-sm btn-group-toggle" data-toggle="buttons">
-			  <label class="btn btn-light">
-			    <input type="radio" name="radio_color"> S
-			  </label>
-			  <label class="btn btn-light active">
-			    <input type="radio" name="radio_color" checked> M
-			  </label>
-			  <label class="btn btn-light">
-			    <input type="radio" name="radio_color"> L
-			  </label>
-			  <label class="btn btn-light">
-			    <input type="radio" name="radio_color"> XL
-			  </label>
-			</div>
-		</div>
-	</div> <!-- row.// -->
+<!--	<div class="row">-->
+<!--		<div class="item-option-select">-->
+<!--			<h6>Choose Color</h6>-->
+<!--			<div class="btn-group btn-group-sm btn-group-toggle" data-toggle="buttons">-->
+<!--			  <label class="btn btn-light">-->
+<!--			    <input type="radio" name="radio_color"> Silver-->
+<!--			  </label>-->
+<!--			  <label class="btn btn-light">-->
+<!--			    <input type="radio" name="radio_color" > Gray-->
+<!--			  </label>-->
+<!--			  <label class="btn btn-light active">-->
+<!--			    <input type="radio" name="radio_color checked"> Gold-->
+<!--			  </label>-->
+<!--			  <label class="btn btn-light">-->
+<!--			    <input type="radio" name="radio_color"> Black-->
+<!--			  </label>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--	</div> &lt;!&ndash; row.// &ndash;&gt;-->
+<!--	<div class="row">-->
+<!--		<div class="item-option-select">-->
+<!--			<h6>Select Size</h6>-->
+<!--			<div class="btn-group btn-group-sm btn-group-toggle" data-toggle="buttons">-->
+<!--			  <label class="btn btn-light">-->
+<!--			    <input type="radio" name="radio_color"> S-->
+<!--			  </label>-->
+<!--			  <label class="btn btn-light active">-->
+<!--			    <input type="radio" name="radio_color" checked> M-->
+<!--			  </label>-->
+<!--			  <label class="btn btn-light">-->
+<!--			    <input type="radio" name="radio_color"> L-->
+<!--			  </label>-->
+<!--			  <label class="btn btn-light">-->
+<!--			    <input type="radio" name="radio_color"> XL-->
+<!--			  </label>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--	</div> &lt;!&ndash; row.// &ndash;&gt;-->
 	<hr>
 	{% if single_product.stock <= 0 %}
 		<h5 class = "text-danger">Out of Stock</h5>
 	{% else %}
 		{% if in_cart %}
 			<a href="#" class="btn  btn-success"> <span class="text">Added to Cart</span> <i class="fas fa-check"></i>  </a>
-			<a href="{% url 'cart' %}" class="btn  btn-outline-primary"> <span class="text">View Cart</span> <i class="fas fa-eye"></i>  </a>
+			<a href="{% url 'cart' %}" class="btn  btn-outline-primary"> <span class="text">View Cart</span> <i class="fas fa-eye	"></i>  </a>
 
 		{% else %}
 		<a href="{% url 'add_cart' single_product.id %}" class="btn  btn-primary"> <span class="text">Add to Cart</span> <i class="fas fa-shopping-cart"></i>  </a>
@@ -88,36 +88,36 @@
 
 <br>
 
-<div class="row">
-			<div class="col-md-9">
+<!--<div class="row">-->
+<!--			<div class="col-md-9">-->
 
-	<header class="section-heading">
-		<h3>Customer Reviews </h3>
+<!--	<header class="section-heading">-->
+<!--		<h3>Customer Reviews </h3>--s>
 
-	</header>
+<!--	</header>-->
 
-	<article class="box mb-3">
-		<div class="icontext w-100">
-			<img src="{% static './images/avatars/avatar1.jpg' %}" class="img-xs icon rounded-circle">
-			<div class="text">
-				<span class="date text-muted float-md-right">24.04.2020 </span>
-				<h6 class="mb-1">Mike John </h6>
+<!--	<article class="box mb-3">-->
+<!--		<div class="icontext w-100">-->
+<!--			<img src="{% static './images/avatars/avatar1.jpg' %}" class="img-xs icon rounded-circle">-->
+<!--			<div class="text">-->
+<!--				<span class="date text-muted float-md-right">24.04.2020 </span>-->
+<!--				<h6 class="mb-1">Mike John </h6>-->
 
-			</div>
-		</div> <!-- icontext.// -->
-		<div class="mt-3">
-			<p>
-				Dummy comment Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip
-			</p>
-		</div>
-	</article>
+<!--			</div>-->
+<!--		</div> &lt;!&ndash; icontext.// &ndash;&gt;-->
+<!--		<div class="mt-3">-->
+<!--			<p>-->
+<!--				Dummy comment Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod-->
+<!--				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,-->
+<!--				quis nostrud exercitation ullamco laboris nisi ut aliquip-->
+<!--			</p>-->
+<!--		</div>-->
+<!--	</article>-->
 
 
 
-	</div> <!-- col.// -->
-</div> <!-- row.// -->
+<!--	</div> &lt;!&ndash; col.// &ndash;&gt;-->
+<!--</div> &lt;!&ndash; row.// &ndash;&gt;-->
 
 
 </div> <!-- container .//  -->
