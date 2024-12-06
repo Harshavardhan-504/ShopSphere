@@ -53,6 +53,7 @@ def register(request):
     }
     return render(request, 'accounts/register.html', context)
 
+#Login funtion
 def login(request):
     if request.method == 'POST':
         email = request.POST['email']
