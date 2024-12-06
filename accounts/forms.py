@@ -5,6 +5,7 @@ from django.db.models.base import Model
 from django.forms.utils import ErrorList
 from .models import Account
 
+#Registration Form to capture the details
 class RegistrationForm(forms.ModelForm):
     password = forms.CharField(widget = forms.PasswordInput(attrs={
         'placeholder': 'Enter your Password'

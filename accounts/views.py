@@ -16,10 +16,9 @@ from django.core.mail import EmailMessage
 
 from carts.views import _cart_id
 from carts.models import Cart, CartItem
-import requests
 
+#Register funtion
 def register(request):
-
     if request.method == 'POST':
         form = RegistrationForm(request.POST)
         if form.is_valid():
@@ -78,6 +77,7 @@ def logout(request):
 def activate(request):
     return
 
+#Forgot password
 def forgotPassword(request):
     if request.method == 'POST':
         email = request.POST['email']
